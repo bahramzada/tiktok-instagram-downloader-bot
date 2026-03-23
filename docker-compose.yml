@@ -1,0 +1,14 @@
+services:
+  tg-inst-tt-bot:
+    build: .
+    container_name: tg-inst-tt-bot
+    restart: unless-stopped
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      OWNER_ID: ${OWNER_ID:-861207023}
+      CONFIG_FILE_PATH: /app/config.json
+    volumes:
+      - ./config.json:/app/config.json
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8

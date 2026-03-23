@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.npm
+.git
+.gitignore
+*.mp4
+video_*.mp4
+.DS_Store
